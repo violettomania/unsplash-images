@@ -64,6 +64,7 @@ export default function App() {
     )
       .then((response) => response.json())
       .then((data) => {
+        if (data.errors) throw new Error(data.errors[0]);
         setImages((prevImages) => [...prevImages, ...data.results]);
         setIsLoading(false);
       })
