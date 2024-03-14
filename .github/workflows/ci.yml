@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REACT_APP_VERSION: 1.0.0
+      REACT_APP_UNSPLASH_API_KEY: ${{ secrets.REACT_APP_UNSPLASH_API_KEY }}
 
     steps:
       - name: Checkout 🛎️
@@ -27,8 +28,6 @@ jobs:
 
       - name: Build 🏗️
         run: npm run build
-        env:
-          REACT_APP_UNSPLASH_API_KEY: ${{ secrets.REACT_APP_UNSPLASH_API_KEY }}
 
       - name: Upload artifacts ⬆️
         uses: actions/upload-pages-artifact@v3
