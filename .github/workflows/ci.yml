@@ -39,9 +39,9 @@ jobs:
           REACT_APP_UNSPLASH_API_KEY: ${{ secrets.REACT_APP_UNSPLASH_API_KEY }}
 
       - name: Build 🏗️
-        run: REACT_APP_UNSPLASH_API_KEY=${{ secrets.REACT_APP_UNSPLASH_API_KEY }} npm run build
-        # env:
-        #   REACT_APP_UNSPLASH_API_KEY: ${{ secrets.REACT_APP_UNSPLASH_API_KEY }}
+        run: npm run build
+        env:
+          REACT_APP_UNSPLASH_API_KEY: ${{ secrets.REACT_APP_UNSPLASH_API_KEY }}
 
       - name: Upload artifacts ⬆️
         uses: actions/upload-pages-artifact@v3
