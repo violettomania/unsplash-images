@@ -265,7 +265,7 @@ ul {
   padding: 1rem 0;
   margin: 0 auto;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .dark-toggle {
